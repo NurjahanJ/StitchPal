@@ -1,10 +1,11 @@
 # StitchPal
 
-StitchPal is a Flutter application that helps crochet enthusiasts create, manage, and track their crochet projects. The app leverages OpenAI's API to generate custom crochet patterns and yarn suggestions based on user input.
+StitchPal is a Flutter application that helps crochet enthusiasts create, manage, and track their crochet projects. The app leverages OpenAI's API to generate custom crochet patterns and yarn suggestions based on user input, along with AI-generated images of the patterns.
 
 ## Features
 
 - **Custom Pattern Generation**: Create unique crochet patterns based on your descriptions using OpenAI's GPT-4 model
+- **AI-Generated Pattern Images**: Visualize your patterns with AI-generated images
 - **Yarn Suggestions**: Get personalized yarn recommendations for your projects that are saved with your patterns
 - **Project Management**: Save, track, and organize your crochet projects
 - **Progress Tracking**: Monitor your progress on each project
@@ -21,13 +22,13 @@ StitchPal is a Flutter application that helps crochet enthusiasts create, manage
 ## Screenshots
 
 - Project Input Screen: Enter your crochet project description and select tags
-- Pattern Result Screen: View the generated pattern with instructions and materials
+- Pattern Result Screen: View the generated pattern with instructions, materials, yarn suggestions, and AI-generated images
 - Saved Projects Screen: Manage your saved crochet projects
 
 ## Technologies Used
 
 - **Flutter**: Cross-platform UI framework
-- **OpenAI API**: For pattern generation (GPT-4) and yarn suggestions
+- **OpenAI API**: For pattern generation (GPT-4), yarn suggestions, and image generation (DALL-E)
 - **Material Design 3**: Modern UI components and theming
 
 ## Setup
@@ -40,20 +41,32 @@ StitchPal is a Flutter application that helps crochet enthusiasts create, manage
 ### Installation
 
 1. Clone the repository
-2. Create a `.env` file in the project root with your OpenAI API key:
+2. Create a `.env` file in the **project root directory** (not in the assets directory) with your OpenAI API key:
    ```
    OPENAI_API_KEY=your_api_key_here
    ```
 3. Run `flutter pub get` to install dependencies
 4. Run the app with `flutter run`
 
-## Environment Variables
+## Environment Variables and Security
 
 The app uses the following environment variables:
 
 - `OPENAI_API_KEY`: Your OpenAI API key for accessing GPT-4 and DALL-E
 
-For security, the `.env` file is included in `.gitignore` to prevent exposing sensitive information.
+⚠️ **IMPORTANT SECURITY NOTES**:
+- The `.env` file is included in `.gitignore` to prevent exposing sensitive information
+- **NEVER commit your API key to the repository**
+- If you accidentally commit your API key, revoke it immediately from your OpenAI account
+- Ensure the `.env` file is in the project root directory, not in subdirectories
+- GitHub's secret scanning may block pushes containing API keys for your protection
+
+## Current Development Status
+
+The app is currently under active development with the following items being worked on:
+- Updating the PatternResultScreen to display AI-generated images and yarn suggestions
+- Implementing dynamic pattern generation based on user input instead of using sample patterns
+- Fixing environment variable loading to properly access the OpenAI API
 
 ## Project Structure
 
