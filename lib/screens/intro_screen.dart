@@ -113,7 +113,7 @@ class _IntroScreenState extends State<IntroScreen> with SingleTickerProviderStat
                       'Your AI-Powered Crochet Companion',
                       textAlign: TextAlign.center,
                       style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                        color: StitchPalTheme.textColor,
+                        color: const Color.fromARGB(255, 163, 149, 149),
                         fontWeight: FontWeight.w500,
                       ),
                     ),
@@ -145,7 +145,18 @@ class _IntroScreenState extends State<IntroScreen> with SingleTickerProviderStat
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            const Icon(Icons.add_circle_outline, size: 24),
+                            Icon(
+                              Icons.add_circle_outline,
+                              size: 28,
+                              color: Colors.white,
+                              shadows: const [
+                                Shadow(
+                                  color: Colors.black26,
+                                  blurRadius: 3,
+                                  offset: Offset(1, 1),
+                                ),
+                              ],
+                            ),
                             const SizedBox(width: 12),
                             Text(
                               'Start a New Project',
