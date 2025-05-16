@@ -61,13 +61,6 @@ The app uses the following environment variables:
 - Ensure the `.env` file is in the project root directory, not in subdirectories
 - GitHub's secret scanning may block pushes containing API keys for your protection
 
-## Current Development Status
-
-The app is currently under active development with the following items being worked on:
-- Updating the PatternResultScreen to display AI-generated images and yarn suggestions
-- Implementing dynamic pattern generation based on user input instead of using sample patterns
-- Fixing environment variable loading to properly access the OpenAI API
-
 ## Project Structure
 
 - `lib/models/`: Data models for patterns, materials, and saved projects
