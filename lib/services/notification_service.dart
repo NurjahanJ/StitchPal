@@ -2,6 +2,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 
+// Global key for accessing context from anywhere
+final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+
 // This is a stub implementation of the notification service that doesn't use the problematic package
 class NotificationService {
   static final NotificationService _instance = NotificationService._internal();
@@ -47,13 +50,12 @@ class NotificationService {
     
     _isTimerActive = true;
     
-    // Schedule a notification every 30 minutes
-    _breakTimer = Timer.periodic(const Duration(minutes: 30), (timer) {
-      // Instead of showing a notification, just print to console
-      debugPrint('Break time: ${_randomCuteMessage}');
+    // Schedule a notification every 5 seconds
+    _breakTimer = Timer.periodic(const Duration(seconds: 5), (timer) {
+      _showBreakNotification();
     });
     
-    debugPrint('Break timer started (notifications disabled)');
+    debugPrint('Break timer started - 5 second intervals');
   }
   
   // Stop the break timer
@@ -69,13 +71,30 @@ class NotificationService {
   
   // Show a break notification
   Future<void> _showBreakNotification() async {
-    // Stub implementation
-    debugPrint('Break notification (disabled): ${_randomCuteMessage}');
+    final message = _randomCuteMessage;
+    debugPrint('Break notification: $message');
+    
+    // Get the current context using a GlobalKey
+    if (navigatorKey.currentContext != null) {
+      showDialog(
+        context: navigatorKey.currentContext!,
+        builder: (context) => AlertDialog(
+          title: const Text('Time for a Break! 🧶'),
+          content: Text(message),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: const Text('OK'),
+            ),
+          ],
+        ),
+      );
+    }
   }
   
   // Show a test notification immediately
   Future<void> showTestNotification() async {
     // Stub implementation
-    debugPrint('Test notification (disabled): This is a test notification from StitchPal! 🧶');
+    debugPrint('Test notification: This is a test notification from StitchPal! 🧶');
   }
 }

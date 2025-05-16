@@ -75,13 +75,14 @@ class _ProjectTimerState extends State<ProjectTimer> {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 2,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
+    return SingleChildScrollView(
+      child: Card(
+        elevation: 2,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+        ),
+        child: Padding(
+        padding: const EdgeInsets.fromLTRB(16.0, 12.0, 16.0, 8.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -102,7 +103,7 @@ class _ProjectTimerState extends State<ProjectTimer> {
               ],
             ),
             
-            const SizedBox(height: 16),
+            const SizedBox(height: 8),
             
             // Timer display
             Container(
@@ -122,7 +123,7 @@ class _ProjectTimerState extends State<ProjectTimer> {
               ),
             ),
             
-            const SizedBox(height: 16),
+            const SizedBox(height: 8),
             
             // Timer controls
             Row(
@@ -163,6 +164,7 @@ class _ProjectTimerState extends State<ProjectTimer> {
             ),
           ],
         ),
+      ),
       ),
     );
   }
