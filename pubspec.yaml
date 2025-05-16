@@ -53,6 +53,7 @@ dependencies:
   # Permission handling for notifications
   permission_handler: ^11.3.0
   intl: ^0.20.2
+  flutter_local_notifications: ^19.2.0
 
 dev_dependencies:
   flutter_test:
@@ -78,7 +79,6 @@ flutter:
 
   # Assets for the StitchPal app
   assets:
-    - assets/images/
     - .env
 
   # An image asset can refer to one or more resolution-specific "variants", see

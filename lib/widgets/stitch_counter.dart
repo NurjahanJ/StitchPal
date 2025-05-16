@@ -70,9 +70,10 @@ class _StitchCounterState extends State<StitchCounter> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: Column(
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 24.0),
+        child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Header
@@ -260,6 +261,7 @@ class _StitchCounterState extends State<StitchCounter> {
             ),
           ),
         ],
+        ),
       ),
     );
   }
