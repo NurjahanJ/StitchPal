@@ -61,6 +61,13 @@ The app uses the following environment variables:
 - Ensure the `.env` file is in the project root directory, not in subdirectories
 - GitHub's secret scanning may block pushes containing API keys for your protection
 
+## Current Development Status
+
+The app is currently under active development (Last Updated: May 16, 2025) with the following items being worked on:
+- Implementing the global assistant modal for enhanced user guidance
+- Refining the stitch counter functionality
+- Optimizing the main app structure and build configuration
+
 ## Project Structure
 
 - `lib/models/`: Data models for patterns, materials, and saved projects
