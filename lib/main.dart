@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:stitchpal/services/notification_service.dart';
 import 'package:stitchpal/screens/crochet_tools_screen.dart';
 import 'package:stitchpal/screens/intro_screen.dart';
 import 'package:stitchpal/screens/project_input_screen.dart';
@@ -40,6 +41,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      navigatorKey: navigatorKey,
       title: 'StitchPal',
       theme: StitchPalTheme.themeData,
       home: const IntroScreen(), // Start with the intro screen

@@ -50,21 +50,31 @@ class _CrochetToolsScreenState extends State<CrochetToolsScreen> with SingleTick
       body: SafeArea(
         child: TabBarView(
           controller: _tabController,
-          children: const [
+          children: [
             // Stitch Counter Tool
-            StitchCounter(),
+            SingleChildScrollView(
+              child: Padding(
+                padding: EdgeInsets.only(bottom: MediaQuery.of(context).padding.bottom),
+                child: const StitchCounter(),
+              ),
+            ),
             
             // Stitch Guide Tool
-            StitchGuide(),
+            const SingleChildScrollView(child: StitchGuide()),
             
             // Gauge Calculator Tool
-            GaugeCalculator(),
+            const SingleChildScrollView(child: GaugeCalculator()),
             
             // Conversion Chart Tool
-            ConversionChart(),
+            const ConversionChart(),
             
             // Timer Tool
-            CrochetTimer(),
+            SingleChildScrollView(
+              child: Padding(
+                padding: EdgeInsets.only(bottom: MediaQuery.of(context).padding.bottom),
+                child: const CrochetTimer(),
+              ),
+            ),
           ],
         ),
       ),

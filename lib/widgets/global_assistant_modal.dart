@@ -91,14 +91,20 @@ class _GlobalAssistantModalState extends State<GlobalAssistantModal> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: MediaQuery.of(context).size.height * 0.75,
-      decoration: const BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(24),
-          topRight: Radius.circular(24),
-        ),
+    final viewInsets = MediaQuery.of(context).viewInsets;
+    final availableHeight = MediaQuery.of(context).size.height;
+    final modalHeight = availableHeight * 0.75;
+    
+    return Padding(
+      padding: EdgeInsets.only(bottom: viewInsets.bottom),
+      child: Container(
+        height: modalHeight,
+        decoration: const BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(24),
+            topRight: Radius.circular(24),
+          ),
       ),
       child: Column(
         children: [
@@ -244,6 +250,6 @@ class _GlobalAssistantModalState extends State<GlobalAssistantModal> {
           ),
         ],
       ),
-    );
+    ));
   }
 }
