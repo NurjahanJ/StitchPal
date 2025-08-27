@@ -1,5 +1,5 @@
 {
-  "framework": "flutter",
+  "framework": "vite",
   "buildCommand": "flutter build web --release",
   "outputDirectory": "build/web",
   "routes": [
