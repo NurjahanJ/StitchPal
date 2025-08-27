@@ -191,7 +191,7 @@ class StitchPalTheme {
       ),
       
       // Apply Material 3 principles with rounded corners and shadows
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         elevation: 0,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
