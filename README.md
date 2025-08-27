@@ -48,6 +48,24 @@ StitchPal is a Flutter application that helps crochet enthusiasts create, manage
 3. Run `flutter pub get` to install dependencies
 4. Run the app with `flutter run`
 
+### Deployment to Vercel
+
+This project is configured for easy deployment to Vercel:
+
+1. Fork or push this repository to your GitHub account
+2. Connect your GitHub repository to Vercel
+3. Add the following environment variables in your Vercel project settings:
+   - `OPENAI_API_KEY`: Your OpenAI API key
+4. Deploy! Vercel will automatically use the `vercel.json` and `build.sh` files to build and deploy your Flutter web app
+
+#### Manual Deployment
+
+You can also deploy manually using the Vercel CLI:
+
+1. Install Vercel CLI: `npm i -g vercel`
+2. Run `vercel` in the project directory
+3. Follow the prompts to link your project
+
 ## Environment Variables and Security
 
 The app uses the following environment variables:
