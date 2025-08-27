@@ -1,6 +1,5 @@
 {
-  "framework": "vite",
-  "buildCommand": "flutter build web --release",
+  "framework": "static",
   "outputDirectory": "build/web",
   "routes": [
     { "handle": "filesystem" },
