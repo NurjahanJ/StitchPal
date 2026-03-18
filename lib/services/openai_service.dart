@@ -116,11 +116,11 @@ class OpenAIService {
     try {
       // Create a prompt that includes the description and tags
       final String tagsText = tags.isNotEmpty ? ' with tags: ${tags.join(', ')}' : '';
-      final prompt = 'Create a detailed crochet pattern for: $description$tagsText. ' +
-          'Include a title, skill level, materials list, step-by-step instructions divided into sections, ' +
-          'and stitch abbreviations. Format as JSON with these fields: ' +
-          'title, skillLevel, materials (array of objects with name and details), ' +
-          'instructions (array of objects with sectionTitle and steps array), ' +
+      final prompt = 'Create a detailed crochet pattern for: $description$tagsText. '
+          'Include a title, skill level, materials list, step-by-step instructions divided into sections, '
+          'and stitch abbreviations. Format as JSON with these fields: '
+          'title, skillLevel, materials (array of objects with name and details), '
+          'instructions (array of objects with sectionTitle and steps array), '
           'and stitchAbbreviations (object with abbreviation keys and description values).';
 
       debugPrint('Sending pattern generation request to OpenAI...');

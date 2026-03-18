@@ -413,7 +413,7 @@ class _GaugeCalculatorState extends State<GaugeCalculator> {
   }
   
   String _formatAdjustment(double adjustment) {
-    return adjustment.toStringAsFixed(2) + 'x';
+    return '${adjustment.toStringAsFixed(2)}x';
   }
   
   String _getRowExplanation(double adjustment) {

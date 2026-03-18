@@ -32,22 +32,12 @@ class StitchPalTheme {
 
   // Utility method to safely handle opacity for colors
   static Color safeOpacity(Color color, double opacity) {
-    return Color.fromRGBO(
-      color.red,
-      color.green,
-      color.blue,
-      opacity,
-    );
+    return color.withValues(alpha: opacity);
   }
 
   // Utility method to safely handle alpha for colors
   static Color safeAlpha(Color color, double alphaPercent) {
-    return Color.fromRGBO(
-      color.red,
-      color.green,
-      color.blue,
-      alphaPercent,
-    );
+    return color.withValues(alpha: alphaPercent);
   }
   
   // Get color for a specific tag
@@ -79,20 +69,18 @@ class StitchPalTheme {
   static ThemeData get themeData {
     return ThemeData(
       useMaterial3: true,
-      colorScheme: ColorScheme.light(
+      colorScheme: ColorScheme(
         primary: primaryColor,
         secondary: secondaryColor,
         tertiary: accentColor,
         surface: surfaceColor,
-        background: backgroundColor,
         error: errorColor,
         onPrimary: Colors.white,
         onSecondary: textColor,
         onTertiary: textColor,
         onSurface: textColor,
-        onBackground: textColor,
         onError: Colors.white,
-        surfaceTint: primaryColor.withValues(alpha: 0.05),
+        brightness: Brightness.light,
       ),
       
       // Enhanced typography with mixed serif and sans-serif
