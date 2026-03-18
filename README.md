@@ -48,22 +48,25 @@ StitchPal is a Flutter application that helps crochet enthusiasts create, manage
 3. Run `flutter pub get` to install dependencies
 4. Run the app with `flutter run`
 
-### Deployment to Vercel
+### Deployment to Netlify
 
-This project is configured for easy deployment to Vercel:
+This project is configured for easy deployment to Netlify:
 
 1. Fork or push this repository to your GitHub account
-2. Connect your GitHub repository to Vercel
-3. Add the following environment variables in your Vercel project settings:
+2. Log in to [Netlify](https://netlify.com) and connect your GitHub account
+3. Click "Add new site" → "Import an existing project"
+4. Select your GitHub repository
+5. Netlify will automatically detect the `netlify.toml` configuration
+6. Add the following environment variables in your Netlify site settings:
    - `OPENAI_API_KEY`: Your OpenAI API key
-4. Deploy! Vercel will automatically use the `vercel.json` and `build.sh` files to build and deploy your Flutter web app
+7. Deploy! Netlify will automatically build and deploy your Flutter web app
 
 #### Manual Deployment
 
-You can also deploy manually using the Vercel CLI:
+You can also deploy manually using the Netlify CLI:
 
-1. Install Vercel CLI: `npm i -g vercel`
-2. Run `vercel` in the project directory
+1. Install Netlify CLI: `npm i -g netlify-cli`
+2. Run `netlify deploy --prod` in the project directory
 3. Follow the prompts to link your project
 
 ## Environment Variables and Security

@@ -1,8 +1,0 @@
-{
-  "buildCommand": "sh build.sh",
-  "outputDirectory": "build/web",
-  "framework": "flutter",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
-}
