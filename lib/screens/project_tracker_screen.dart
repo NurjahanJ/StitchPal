@@ -115,9 +115,7 @@ class _ProjectTrackerScreenState extends State<ProjectTrackerScreen> with Single
           controller: _tabController,
           indicatorColor: StitchPalTheme.textColor,
           labelColor: StitchPalTheme.textColor,
-          unselectedLabelColor: StitchPalTheme.textColor.withAlpha(
-            (StitchPalTheme.textColor.alpha * 0.7).round()
-          ),
+          unselectedLabelColor: StitchPalTheme.textColor.withValues(alpha: 0.7),
           tabs: const [
             Tab(text: 'Pattern'),
             Tab(text: 'Progress'),
@@ -236,7 +234,7 @@ class _ProjectTrackerScreenState extends State<ProjectTrackerScreen> with Single
                   ),
                 ],
               ),
-            ))).toList(),
+            ))),
             
             const SizedBox(height: 16),
             

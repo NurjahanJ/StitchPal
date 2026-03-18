@@ -17,7 +17,7 @@ class MaterialsList extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
         side: BorderSide(
-          color: StitchPalTheme.accentColor.withOpacity(0.5),
+          color: StitchPalTheme.accentColor.withValues(alpha: 0.5),
           width: 1,
         ),
       ),
@@ -87,7 +87,7 @@ class MaterialsList extends StatelessWidget {
                 Text(
                   material.details,
                   style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                        color: StitchPalTheme.textColor.withOpacity(0.8),
+                        color: StitchPalTheme.textColor.withValues(alpha: 0.8),
                       ),
                 ),
               ],

@@ -126,7 +126,7 @@ class _BreakTimerScreenState extends State<BreakTimerScreen> {
                   return Icon(
                     Icons.self_improvement,
                     size: 80,
-                    color: StitchPalTheme.primaryColor.withOpacity(0.7),
+                    color: StitchPalTheme.primaryColor.withValues(alpha: 0.7),
                   );
                 },
               ),
@@ -135,7 +135,7 @@ class _BreakTimerScreenState extends State<BreakTimerScreen> {
                 'Your crochet project will be waiting for you! 🧶',
                 style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                   fontStyle: FontStyle.italic,
-                  color: StitchPalTheme.textColor.withOpacity(0.7),
+                  color: StitchPalTheme.textColor.withValues(alpha: 0.7),
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -190,7 +190,7 @@ class _BreakTimerScreenState extends State<BreakTimerScreen> {
                   color: StitchPalTheme.surfaceColor,
                   boxShadow: [
                     BoxShadow(
-                      color: StitchPalTheme.primaryColor.withOpacity(0.1),
+                      color: StitchPalTheme.primaryColor.withValues(alpha: 0.1),
                       blurRadius: 10,
                       offset: const Offset(0, 4),
                     ),
@@ -204,7 +204,7 @@ class _BreakTimerScreenState extends State<BreakTimerScreen> {
                         Container(
                           padding: const EdgeInsets.all(8),
                           decoration: BoxDecoration(
-                            color: StitchPalTheme.primaryColor.withOpacity(0.1),
+                            color: StitchPalTheme.primaryColor.withValues(alpha: 0.1),
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: Icon(
@@ -229,7 +229,7 @@ class _BreakTimerScreenState extends State<BreakTimerScreen> {
                     Text(
                       'Regular breaks help prevent repetitive strain injuries while crocheting. We\'ll remind you to take a 5-minute break every 30 minutes.',
                       style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                        color: StitchPalTheme.textColor.withOpacity(0.7),
+                        color: StitchPalTheme.textColor.withValues(alpha: 0.7),
                       ),
                     ),
                   ],
@@ -251,7 +251,7 @@ class _BreakTimerScreenState extends State<BreakTimerScreen> {
                         borderRadius: BorderRadius.circular(20),
                         boxShadow: [
                           BoxShadow(
-                            color: StitchPalTheme.primaryColor.withOpacity(0.1),
+                            color: StitchPalTheme.primaryColor.withValues(alpha: 0.1),
                             blurRadius: 10,
                             offset: const Offset(0, 4),
                           ),
@@ -263,7 +263,7 @@ class _BreakTimerScreenState extends State<BreakTimerScreen> {
                           Text(
                             _isTimerActive ? 'Next break in:' : 'Timer not active',
                             style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                              color: StitchPalTheme.textColor.withOpacity(0.7),
+                              color: StitchPalTheme.textColor.withValues(alpha: 0.7),
                             ),
                           ),
                           const SizedBox(height: 16),
@@ -309,7 +309,7 @@ class _BreakTimerScreenState extends State<BreakTimerScreen> {
                         borderRadius: BorderRadius.circular(20),
                         boxShadow: [
                           BoxShadow(
-                            color: StitchPalTheme.primaryColor.withOpacity(0.1),
+                            color: StitchPalTheme.primaryColor.withValues(alpha: 0.1),
                             blurRadius: 10,
                             offset: const Offset(0, 4),
                           ),
@@ -332,7 +332,7 @@ class _BreakTimerScreenState extends State<BreakTimerScreen> {
                             onChanged: (value) {
                               _toggleReminders();
                             },
-                            activeColor: StitchPalTheme.primaryColor,
+                            activeThumbColor: StitchPalTheme.primaryColor,
                             contentPadding: EdgeInsets.zero,
                           ),
                           const Divider(),
@@ -364,10 +364,10 @@ class _BreakTimerScreenState extends State<BreakTimerScreen> {
                       width: double.infinity,
                       padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
-                        color: StitchPalTheme.accentColor.withOpacity(0.1),
+                        color: StitchPalTheme.accentColor.withValues(alpha: 0.1),
                         borderRadius: BorderRadius.circular(20),
                         border: Border.all(
-                          color: StitchPalTheme.accentColor.withOpacity(0.3),
+                          color: StitchPalTheme.accentColor.withValues(alpha: 0.3),
                           width: 1,
                         ),
                       ),

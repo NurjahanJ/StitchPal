@@ -194,7 +194,7 @@ class PatternResultScreen extends StatelessWidget {
             height: 2,
             width: 100,
             decoration: BoxDecoration(
-              color: StitchPalTheme.primaryColor.withOpacity(0.5),
+              color: StitchPalTheme.primaryColor.withValues(alpha: 0.5),
               borderRadius: BorderRadius.circular(1),
             ),
           ),

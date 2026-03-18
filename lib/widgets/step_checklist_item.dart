@@ -21,7 +21,7 @@ class StepChecklistItem extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 8),
       decoration: BoxDecoration(
         color: isCurrent 
-            ? StitchPalTheme.primaryColor.withOpacity(0.1) 
+            ? StitchPalTheme.primaryColor.withValues(alpha: 0.1) 
             : Colors.transparent,
         borderRadius: BorderRadius.circular(12),
         border: isCurrent 
@@ -36,7 +36,7 @@ class StepChecklistItem extends StatelessWidget {
           style: TextStyle(
             decoration: isCompleted ? TextDecoration.lineThrough : null,
             color: isCompleted 
-                ? StitchPalTheme.textColor.withOpacity(0.6) 
+                ? StitchPalTheme.textColor.withValues(alpha: 0.6) 
                 : StitchPalTheme.textColor,
             fontWeight: isCurrent ? FontWeight.bold : FontWeight.normal,
           ),

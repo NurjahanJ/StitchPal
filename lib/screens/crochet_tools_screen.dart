@@ -41,7 +41,7 @@ class _CrochetToolsScreenState extends State<CrochetToolsScreen> with SingleTick
           controller: _tabController,
           isScrollable: true,
           labelColor: StitchPalTheme.primaryColor,
-          unselectedLabelColor: StitchPalTheme.textColor.withOpacity(0.6),
+          unselectedLabelColor: StitchPalTheme.textColor.withValues(alpha: 0.6),
           indicatorColor: StitchPalTheme.primaryColor,
           indicatorWeight: 3,
           tabs: _tabTitles.map((title) => Tab(text: title)).toList(),

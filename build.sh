@@ -11,5 +11,5 @@ export PATH="$PATH:`pwd`/flutter/bin"
 flutter doctor -v
 flutter pub get
 
-# Build for web
+# Build for web with optimizations
 flutter build web --release

@@ -36,7 +36,7 @@ class SkillLevelBadge extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
       decoration: BoxDecoration(
-        color: badgeColor.withOpacity(0.3),
+        color: badgeColor.withValues(alpha: 0.3),
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
           color: badgeColor,
@@ -49,7 +49,7 @@ class SkillLevelBadge extends StatelessWidget {
           Icon(
             badgeIcon,
             size: 16,
-            color: badgeColor.withOpacity(0.8),
+            color: badgeColor.withValues(alpha: 0.8),
           ),
           const SizedBox(width: 6),
           Text(

@@ -86,8 +86,8 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
           );
         },
         backgroundColor: Colors.white,
-        child: const CuteStitchPalIcon(size: 40),
         elevation: 4,
+        child: const CuteStitchPalIcon(size: 40),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       bottomNavigationBar: BottomNavigationBar(

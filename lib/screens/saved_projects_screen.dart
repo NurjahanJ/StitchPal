@@ -140,7 +140,7 @@ class _SavedProjectsScreenState extends State<SavedProjectsScreen> {
             child: Text(
               '${_filteredProjects.length} project${_filteredProjects.length != 1 ? 's' : ''}',
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    color: StitchPalTheme.textColor.withOpacity(0.7),
+                    color: StitchPalTheme.textColor.withValues(alpha: 0.7),
                   ),
             ),
           ),
@@ -173,13 +173,13 @@ class _SavedProjectsScreenState extends State<SavedProjectsScreen> {
           Icon(
             Icons.sentiment_dissatisfied,
             size: 64,
-            color: StitchPalTheme.textColor.withOpacity(0.3),
+            color: StitchPalTheme.textColor.withValues(alpha: 0.3),
           ),
           const SizedBox(height: 16),
           Text(
             'No projects found',
             style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                  color: StitchPalTheme.textColor.withOpacity(0.7),
+                  color: StitchPalTheme.textColor.withValues(alpha: 0.7),
                 ),
           ),
           const SizedBox(height: 8),
@@ -188,7 +188,7 @@ class _SavedProjectsScreenState extends State<SavedProjectsScreen> {
                 ? 'Create a new project to get started'
                 : 'Try selecting different tags',
             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                  color: StitchPalTheme.textColor.withOpacity(0.5),
+                  color: StitchPalTheme.textColor.withValues(alpha: 0.5),
                 ),
           ),
           if (_selectedTags.isNotEmpty) ...[

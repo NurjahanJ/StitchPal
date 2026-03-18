@@ -32,11 +32,11 @@ class ChatBubble extends StatelessWidget {
               decoration: BoxDecoration(
                 color: isFromUser 
                     ? StitchPalTheme.primaryColor
-                    : StitchPalTheme.accentColor.withOpacity(0.1),
+                    : StitchPalTheme.accentColor.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(18.0),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.05),
+                    color: Colors.black.withValues(alpha: 0.05),
                     blurRadius: 5,
                     offset: const Offset(0, 2),
                   ),
@@ -57,8 +57,8 @@ class ChatBubble extends StatelessWidget {
                     timeFormat.format(message.timestamp),
                     style: TextStyle(
                       color: isFromUser 
-                          ? Colors.white.withOpacity(0.7) 
-                          : StitchPalTheme.textColor.withOpacity(0.6),
+                          ? Colors.white.withValues(alpha: 0.7) 
+                          : StitchPalTheme.textColor.withValues(alpha: 0.6),
                       fontSize: 12,
                     ),
                     textAlign: TextAlign.right,
@@ -80,8 +80,8 @@ class ChatBubble extends StatelessWidget {
     return CircleAvatar(
       radius: 16,
       backgroundColor: isUser 
-          ? StitchPalTheme.primaryColor.withOpacity(0.2)
-          : StitchPalTheme.accentColor.withOpacity(0.2),
+          ? StitchPalTheme.primaryColor.withValues(alpha: 0.2)
+          : StitchPalTheme.accentColor.withValues(alpha: 0.2),
       child: Icon(
         isUser ? Icons.person : Icons.smart_toy,
         size: 18,
