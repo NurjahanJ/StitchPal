@@ -17,9 +17,9 @@ class StitchCounter extends StatefulWidget {
 
 class _StitchCounterState extends State<StitchCounter> {
   late int _count;
-  List<String> _counters = ['Main Counter'];
+  final List<String> _counters = ['Main Counter'];
   int _selectedCounterIndex = 0;
-  List<int> _counterValues = [0];
+  final List<int> _counterValues = [0];
 
   @override
   void initState() {

@@ -43,7 +43,7 @@ class _ConversionChartState extends State<ConversionChart> with SingleTickerProv
               Text(
                 'Reference charts for hook sizes and yarn weights across different standards',
                 style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                  color: StitchPalTheme.textColor.withOpacity(0.7),
+                  color: StitchPalTheme.textColor.withValues(alpha: 0.7),
                 ),
               ),
             ],
@@ -63,7 +63,7 @@ class _ConversionChartState extends State<ConversionChart> with SingleTickerProv
           child: TabBar(
             controller: _tabController,
             labelColor: StitchPalTheme.primaryColor,
-            unselectedLabelColor: StitchPalTheme.textColor.withOpacity(0.7),
+            unselectedLabelColor: StitchPalTheme.textColor.withValues(alpha: 0.7),
             indicatorColor: StitchPalTheme.primaryColor,
             indicatorWeight: 3,
             tabs: const [
@@ -285,7 +285,7 @@ class _ConversionChartState extends State<ConversionChart> with SingleTickerProv
                 borderRadius: BorderRadius.circular(12),
                 boxShadow: [
                   BoxShadow(
-                    color: StitchPalTheme.primaryColor.withOpacity(0.1),
+                    color: StitchPalTheme.primaryColor.withValues(alpha: 0.1),
                     blurRadius: 8,
                     offset: const Offset(0, 2),
                   ),
@@ -293,7 +293,7 @@ class _ConversionChartState extends State<ConversionChart> with SingleTickerProv
               ),
               child: DataTable(
                 headingRowColor: WidgetStateProperty.all(
-                  StitchPalTheme.primaryColor.withOpacity(0.2),
+                  StitchPalTheme.primaryColor.withValues(alpha: 0.2),
                 ),
                 border: TableBorder(
                   horizontalInside: BorderSide(
@@ -328,8 +328,8 @@ class _ConversionChartState extends State<ConversionChart> with SingleTickerProv
             title: 'What is WPI?',
             content: 'WPI (Wraps Per Inch) is determined by wrapping yarn around a ruler for 1 inch without overlapping or leaving gaps, then counting the number of strands.',
             icon: Icons.help_outline,
-            color: StitchPalTheme.accentColor.withOpacity(0.1),
-            borderColor: StitchPalTheme.accentColor.withOpacity(0.3),
+            color: StitchPalTheme.accentColor.withValues(alpha: 0.1),
+            borderColor: StitchPalTheme.accentColor.withValues(alpha: 0.3),
           ),
         ],
       ),
@@ -346,10 +346,10 @@ class _ConversionChartState extends State<ConversionChart> with SingleTickerProv
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: color ?? StitchPalTheme.primaryColor.withOpacity(0.1),
+        color: color ?? StitchPalTheme.primaryColor.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(12),
         border: Border.all(
-          color: borderColor ?? StitchPalTheme.primaryColor.withOpacity(0.3),
+          color: borderColor ?? StitchPalTheme.primaryColor.withValues(alpha: 0.3),
           width: 1,
         ),
       ),
@@ -416,7 +416,7 @@ class _ConversionChartState extends State<ConversionChart> with SingleTickerProv
     return Container(
       color: isEvenRow 
           ? StitchPalTheme.surfaceColor 
-          : StitchPalTheme.primaryColor.withOpacity(0.05),
+          : StitchPalTheme.primaryColor.withValues(alpha: 0.05),
       child: Row(
         children: values.map((value) => isWide 
           ? Container(
