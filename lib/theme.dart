@@ -92,7 +92,7 @@ class StitchPalTheme {
         onSurface: textColor,
         onBackground: textColor,
         onError: Colors.white,
-        surfaceTint: primaryColor.withOpacity(0.05),
+        surfaceTint: primaryColor.withValues(alpha: 0.05),
       ),
       
       // Enhanced typography with mixed serif and sans-serif
@@ -197,7 +197,7 @@ class StitchPalTheme {
           borderRadius: BorderRadius.circular(16),
         ),
         color: surfaceColor,
-        shadowColor: primaryColor.withOpacity(0.2),
+        shadowColor: primaryColor.withValues(alpha: 0.2),
         margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 0),
         clipBehavior: Clip.antiAlias,
       ),
@@ -208,10 +208,10 @@ class StitchPalTheme {
           backgroundColor: WidgetStateProperty.resolveWith<Color>(
             (Set<WidgetState> states) {
               if (states.contains(WidgetState.pressed)) {
-                return primaryColor.withOpacity(0.8); // Deeper press effect
+                return primaryColor.withValues(alpha: 0.8); // Deeper press effect
               }
               if (states.contains(WidgetState.hovered)) {
-                return primaryColor.withOpacity(0.9); // Subtle hover effect
+                return primaryColor.withValues(alpha: 0.9); // Subtle hover effect
               }
               return primaryColor;
             },
@@ -231,7 +231,7 @@ class StitchPalTheme {
           ),
           shadowColor: WidgetStateProperty.resolveWith<Color>(
             (Set<WidgetState> states) {
-              return primaryColor.withOpacity(0.3);
+              return primaryColor.withValues(alpha: 0.3);
             },
           ),
           padding: WidgetStateProperty.resolveWith<EdgeInsetsGeometry>(
@@ -258,10 +258,10 @@ class StitchPalTheme {
           overlayColor: WidgetStateProperty.resolveWith<Color>(
             (Set<WidgetState> states) {
               if (states.contains(WidgetState.hovered)) {
-                return Colors.white.withOpacity(0.1); // Subtle hover effect
+                return Colors.white.withValues(alpha: 0.1); // Subtle hover effect
               }
               if (states.contains(WidgetState.pressed)) {
-                return Colors.white.withOpacity(0.2); // Press effect
+                return Colors.white.withValues(alpha: 0.2); // Press effect
               }
               return Colors.transparent;
             },
@@ -278,7 +278,7 @@ class StitchPalTheme {
           foregroundColor: WidgetStateProperty.resolveWith<Color>(
             (Set<WidgetState> states) {
               if (states.contains(WidgetState.pressed)) {
-                return primaryColor.withOpacity(0.7);
+                return primaryColor.withValues(alpha: 0.7);
               }
               return primaryColor;
             },
@@ -296,7 +296,7 @@ class StitchPalTheme {
             (Set<WidgetState> states) {
               if (states.contains(WidgetState.hovered) || 
                   states.contains(WidgetState.pressed)) {
-                return primaryColor.withOpacity(0.1);
+                return primaryColor.withValues(alpha: 0.1);
               }
               return Colors.transparent;
             },
@@ -309,7 +309,7 @@ class StitchPalTheme {
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: surfaceColor,
-        hoverColor: primaryColor.withOpacity(0.04),
+        hoverColor: primaryColor.withValues(alpha: 0.04),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide(color: dividerColor, width: 1),
@@ -333,7 +333,7 @@ class StitchPalTheme {
         contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
         hintStyle: GoogleFonts.nunitoSans(
           fontSize: 14,
-          color: textColor.withOpacity(0.5),
+          color: textColor.withValues(alpha: 0.5),
           fontWeight: FontWeight.w400,
         ),
         // Add subtle animation for focus transitions
@@ -347,8 +347,8 @@ class StitchPalTheme {
       // Chip theme - more refined and tactile
       chipTheme: ChipThemeData(
         backgroundColor: surfaceColor,
-        disabledColor: dividerColor.withOpacity(0.5),
-        selectedColor: primaryColor.withOpacity(0.15),
+        disabledColor: dividerColor.withValues(alpha: 0.5),
+        selectedColor: primaryColor.withValues(alpha: 0.15),
         secondarySelectedColor: primaryColor,
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
         labelStyle: GoogleFonts.nunitoSans(
@@ -367,7 +367,7 @@ class StitchPalTheme {
           borderRadius: BorderRadius.circular(30),
           side: BorderSide(color: dividerColor),
         ),
-        shadowColor: primaryColor.withOpacity(0.2),
+        shadowColor: primaryColor.withValues(alpha: 0.2),
       ),
       
       // Scaffold background
@@ -379,7 +379,7 @@ class StitchPalTheme {
         foregroundColor: textColor,
         elevation: 0,
         centerTitle: true,
-        shadowColor: primaryColor.withOpacity(0.1),
+        shadowColor: primaryColor.withValues(alpha: 0.1),
         titleTextStyle: GoogleFonts.playfairDisplay(
           fontSize: 22,
           fontWeight: FontWeight.bold,
@@ -402,7 +402,7 @@ class StitchPalTheme {
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         backgroundColor: surfaceColor,
         selectedItemColor: primaryColor,
-        unselectedItemColor: textColor.withOpacity(0.5),
+        unselectedItemColor: textColor.withValues(alpha: 0.5),
         selectedLabelStyle: GoogleFonts.nunitoSans(
           fontSize: 12,
           fontWeight: FontWeight.w600,

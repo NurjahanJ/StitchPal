@@ -16,7 +16,7 @@ class StitchLegend extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
         side: BorderSide(
-          color: StitchPalTheme.accentColor.withOpacity(0.5),
+          color: StitchPalTheme.accentColor.withValues(alpha: 0.5),
           width: 1,
         ),
       ),
@@ -69,7 +69,7 @@ class StitchLegend extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
             decoration: BoxDecoration(
-              color: StitchPalTheme.accentColor.withOpacity(0.3),
+              color: StitchPalTheme.accentColor.withValues(alpha: 0.3),
               borderRadius: BorderRadius.circular(4),
               border: Border.all(
                 color: StitchPalTheme.accentColor,

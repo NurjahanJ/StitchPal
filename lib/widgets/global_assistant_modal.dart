@@ -137,7 +137,7 @@ class _GlobalAssistantModalState extends State<GlobalAssistantModal> {
                       Text(
                         'Your personal crochet helper',
                         style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                          color: Colors.white.withOpacity(0.9),
+                          color: Colors.white.withValues(alpha: 0.9),
                         ),
                       ),
                     ],
@@ -183,7 +183,7 @@ class _GlobalAssistantModalState extends State<GlobalAssistantModal> {
                   Text(
                     'Thinking...',
                     style: TextStyle(
-                      color: StitchPalTheme.textColor.withOpacity(0.6),
+                      color: StitchPalTheme.textColor.withValues(alpha: 0.6),
                     ),
                   ),
                 ],
@@ -197,7 +197,7 @@ class _GlobalAssistantModalState extends State<GlobalAssistantModal> {
               color: Colors.white,
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.05),
+                  color: Colors.black.withValues(alpha: 0.05),
                   blurRadius: 10,
                   offset: const Offset(0, -2),
                 ),
@@ -211,7 +211,7 @@ class _GlobalAssistantModalState extends State<GlobalAssistantModal> {
                     decoration: InputDecoration(
                       hintText: 'Ask StitchPal a question...',
                       hintStyle: TextStyle(
-                        color: StitchPalTheme.textColor.withOpacity(0.5),
+                        color: StitchPalTheme.textColor.withValues(alpha: 0.5),
                       ),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(24),

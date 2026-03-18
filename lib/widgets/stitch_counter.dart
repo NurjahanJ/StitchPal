@@ -102,7 +102,7 @@ class _StitchCounterState extends State<StitchCounter> {
           Text(
             'Keep track of your stitches, rows, or repeats with multiple counters',
             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-              color: StitchPalTheme.textColor.withOpacity(0.7),
+              color: StitchPalTheme.textColor.withValues(alpha: 0.7),
             ),
           ),
           
@@ -161,7 +161,7 @@ class _StitchCounterState extends State<StitchCounter> {
               borderRadius: BorderRadius.circular(16),
               boxShadow: [
                 BoxShadow(
-                  color: StitchPalTheme.primaryColor.withOpacity(0.1),
+                  color: StitchPalTheme.primaryColor.withValues(alpha: 0.1),
                   blurRadius: 10,
                   offset: const Offset(0, 4),
                 ),
@@ -180,7 +180,7 @@ class _StitchCounterState extends State<StitchCounter> {
                 Text(
                   _counters[_selectedCounterIndex],
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    color: StitchPalTheme.textColor.withOpacity(0.7),
+                    color: StitchPalTheme.textColor.withValues(alpha: 0.7),
                   ),
                 ),
               ],
@@ -197,7 +197,7 @@ class _StitchCounterState extends State<StitchCounter> {
               _buildControlButton(
                 icon: Icons.remove,
                 onPressed: _decrement,
-                backgroundColor: StitchPalTheme.accentColor.withOpacity(0.2),
+                backgroundColor: StitchPalTheme.accentColor.withValues(alpha: 0.2),
                 size: 72,
               ),
               
@@ -205,7 +205,7 @@ class _StitchCounterState extends State<StitchCounter> {
               _buildControlButton(
                 icon: Icons.refresh,
                 onPressed: _reset,
-                backgroundColor: StitchPalTheme.secondaryColor.withOpacity(0.2),
+                backgroundColor: StitchPalTheme.secondaryColor.withValues(alpha: 0.2),
                 size: 56,
               ),
               
@@ -213,7 +213,7 @@ class _StitchCounterState extends State<StitchCounter> {
               _buildControlButton(
                 icon: Icons.add,
                 onPressed: _increment,
-                backgroundColor: StitchPalTheme.primaryColor.withOpacity(0.2),
+                backgroundColor: StitchPalTheme.primaryColor.withValues(alpha: 0.2),
                 size: 72,
               ),
             ],
@@ -225,10 +225,10 @@ class _StitchCounterState extends State<StitchCounter> {
           Container(
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
-              color: StitchPalTheme.accentColor.withOpacity(0.1),
+              color: StitchPalTheme.accentColor.withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(12),
               border: Border.all(
-                color: StitchPalTheme.accentColor.withOpacity(0.3),
+                color: StitchPalTheme.accentColor.withValues(alpha: 0.3),
               ),
             ),
             child: Column(

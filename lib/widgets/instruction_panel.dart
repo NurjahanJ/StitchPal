@@ -25,7 +25,7 @@ class _InstructionPanelState extends State<InstructionPanel> {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
         side: BorderSide(
-          color: StitchPalTheme.accentColor.withOpacity(0.5),
+          color: StitchPalTheme.accentColor.withValues(alpha: 0.5),
           width: 1,
         ),
       ),
@@ -67,7 +67,7 @@ class _InstructionPanelState extends State<InstructionPanel> {
                   // Expand/collapse icon
                   Icon(
                     _isExpanded ? Icons.expand_less : Icons.expand_more,
-                    color: StitchPalTheme.textColor.withOpacity(0.7),
+                    color: StitchPalTheme.textColor.withValues(alpha: 0.7),
                   ),
                 ],
               ),

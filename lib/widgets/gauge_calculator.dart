@@ -169,7 +169,7 @@ class _GaugeCalculatorState extends State<GaugeCalculator> {
         Text(
           subtitle,
           style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-            color: StitchPalTheme.textColor.withOpacity(0.7),
+            color: StitchPalTheme.textColor.withValues(alpha: 0.7),
           ),
         ),
       ],
@@ -192,7 +192,7 @@ class _GaugeCalculatorState extends State<GaugeCalculator> {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: StitchPalTheme.primaryColor.withOpacity(0.1),
+            color: StitchPalTheme.primaryColor.withValues(alpha: 0.1),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),
@@ -211,7 +211,7 @@ class _GaugeCalculatorState extends State<GaugeCalculator> {
           Text(
             subtitle,
             style: Theme.of(context).textTheme.bodySmall?.copyWith(
-              color: StitchPalTheme.textColor.withOpacity(0.7),
+              color: StitchPalTheme.textColor.withValues(alpha: 0.7),
             ),
           ),
           const SizedBox(height: 16),
@@ -280,7 +280,7 @@ class _GaugeCalculatorState extends State<GaugeCalculator> {
         suffixText: optional ? '(optional)' : null,
         suffixStyle: TextStyle(
           fontSize: 12,
-          color: StitchPalTheme.textColor.withOpacity(0.5),
+          color: StitchPalTheme.textColor.withValues(alpha: 0.5),
           fontStyle: FontStyle.italic,
         ),
       ),
@@ -306,10 +306,10 @@ class _GaugeCalculatorState extends State<GaugeCalculator> {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: StitchPalTheme.primaryColor.withOpacity(0.1),
+        color: StitchPalTheme.primaryColor.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
-          color: StitchPalTheme.primaryColor.withOpacity(0.3),
+          color: StitchPalTheme.primaryColor.withValues(alpha: 0.3),
           width: 1,
         ),
       ),
@@ -404,7 +404,7 @@ class _GaugeCalculatorState extends State<GaugeCalculator> {
             explanation,
             style: Theme.of(context).textTheme.bodySmall?.copyWith(
               fontStyle: FontStyle.italic,
-              color: StitchPalTheme.textColor.withOpacity(0.7),
+              color: StitchPalTheme.textColor.withValues(alpha: 0.7),
             ),
           ),
         ],

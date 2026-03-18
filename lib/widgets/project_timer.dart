@@ -110,7 +110,7 @@ class _ProjectTimerState extends State<ProjectTimer> {
               width: double.infinity,
               padding: const EdgeInsets.symmetric(vertical: 16),
               decoration: BoxDecoration(
-                color: StitchPalTheme.accentColor.withOpacity(0.1),
+                color: StitchPalTheme.accentColor.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Text(

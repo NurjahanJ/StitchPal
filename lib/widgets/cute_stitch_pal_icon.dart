@@ -26,7 +26,7 @@ class CuteStitchPalIcon extends StatelessWidget {
         shape: BoxShape.circle,
         boxShadow: [
           BoxShadow(
-            color: StitchPalTheme.primaryColor.withOpacity(0.2),
+            color: StitchPalTheme.primaryColor.withValues(alpha: 0.2),
             blurRadius: 4,
             offset: const Offset(0, 2),
           ),

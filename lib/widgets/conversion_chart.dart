@@ -292,7 +292,7 @@ class _ConversionChartState extends State<ConversionChart> with SingleTickerProv
                 ],
               ),
               child: DataTable(
-                headingRowColor: MaterialStateProperty.all(
+                headingRowColor: WidgetStateProperty.all(
                   StitchPalTheme.primaryColor.withOpacity(0.2),
                 ),
                 border: TableBorder(

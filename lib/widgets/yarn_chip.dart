@@ -29,12 +29,12 @@ class YarnChip extends StatelessWidget {
         child: InkWell(
           onTap: onTap,
           borderRadius: BorderRadius.circular(30),
-          splashColor: tagColor.withOpacity(0.3),
-          highlightColor: tagColor.withOpacity(0.1),
+          splashColor: tagColor.withValues(alpha: 0.3),
+          highlightColor: tagColor.withValues(alpha: 0.1),
           child: Ink(
             decoration: BoxDecoration(
               color: isSelected 
-                  ? tagColor.withOpacity(0.15)
+                  ? tagColor.withValues(alpha: 0.15)
                   : StitchPalTheme.surfaceColor,
               borderRadius: BorderRadius.circular(30),
               border: Border.all(
@@ -46,7 +46,7 @@ class YarnChip extends StatelessWidget {
               boxShadow: isSelected 
                   ? [
                       BoxShadow(
-                        color: tagColor.withOpacity(0.2),
+                        color: tagColor.withValues(alpha: 0.2),
                         blurRadius: 4,
                         offset: const Offset(0, 2),
                       )
@@ -71,7 +71,7 @@ class YarnChip extends StatelessWidget {
                     style: GoogleFonts.nunitoSans(
                       fontSize: 14,
                       fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
-                      color: isSelected ? tagColor : StitchPalTheme.textColor.withOpacity(0.7),
+                      color: isSelected ? tagColor : StitchPalTheme.textColor.withValues(alpha: 0.7),
                       letterSpacing: 0.2,
                     ),
                   ),

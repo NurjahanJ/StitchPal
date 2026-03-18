@@ -36,24 +36,24 @@ dependencies:
   cupertino_icons: ^1.0.8
   
   # Google Fonts package for using Lora and DM Serif fonts
-  google_fonts: ^6.1.0
+  google_fonts: ^8.0.2
   
   # HTTP package for API requests to OpenAI
-  http: ^1.2.0
+  http: ^1.6.0
   
   # URL Launcher for opening yarn store links
   url_launcher: ^6.2.5
   
   # Environment variables for API keys
-  flutter_dotenv: ^5.1.0
+  flutter_dotenv: ^6.0.0
   
   # Local notifications disabled for Android 14 compatibility
   # flutter_local_notifications: ^14.1.4
   
   # Permission handling for notifications
-  permission_handler: ^11.3.0
+  permission_handler: ^12.0.1
   intl: ^0.20.2
-  flutter_local_notifications: ^19.2.0
+  flutter_local_notifications: ^19.4.1
 
 dev_dependencies:
   flutter_test:
@@ -64,7 +64,7 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

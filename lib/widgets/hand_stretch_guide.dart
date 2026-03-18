@@ -30,7 +30,7 @@ class HandStretchGuide extends StatelessWidget {
             Text(
               'Prevent hand fatigue and strain with these simple stretches',
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                color: StitchPalTheme.textColor.withOpacity(0.7),
+                color: StitchPalTheme.textColor.withValues(alpha: 0.7),
               ),
             ),
             
@@ -100,10 +100,10 @@ class HandStretchGuide extends StatelessWidget {
               margin: const EdgeInsets.symmetric(vertical: 16),
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: StitchPalTheme.accentColor.withOpacity(0.1),
+                color: StitchPalTheme.accentColor.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(
-                  color: StitchPalTheme.accentColor.withOpacity(0.3),
+                  color: StitchPalTheme.accentColor.withValues(alpha: 0.3),
                 ),
               ),
               child: Column(
@@ -157,7 +157,7 @@ class HandStretchGuide extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -165,7 +165,7 @@ class HandStretchGuide extends StatelessWidget {
       ),
       child: ExpansionTile(
         leading: CircleAvatar(
-          backgroundColor: StitchPalTheme.primaryColor.withOpacity(0.1),
+          backgroundColor: StitchPalTheme.primaryColor.withValues(alpha: 0.1),
           child: Icon(
             icon,
             color: StitchPalTheme.primaryColor,

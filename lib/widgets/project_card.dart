@@ -22,7 +22,7 @@ class ProjectCard extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
         side: BorderSide(
-          color: StitchPalTheme.accentColor.withOpacity(0.3),
+          color: StitchPalTheme.accentColor.withValues(alpha: 0.3),
           width: 1,
         ),
       ),
@@ -83,7 +83,7 @@ class ProjectCard extends StatelessWidget {
                       children: [
                         CircularProgressIndicator(
                           value: project.progress,
-                          backgroundColor: StitchPalTheme.accentColor.withOpacity(0.2),
+                          backgroundColor: StitchPalTheme.accentColor.withValues(alpha: 0.2),
                           valueColor: AlwaysStoppedAnimation<Color>(
                             _getProgressColor(project.progress),
                           ),
@@ -111,14 +111,14 @@ class ProjectCard extends StatelessWidget {
                         Text(
                           'Started ${_formatDate(project.savedDate)}',
                           style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                                color: StitchPalTheme.textColor.withOpacity(0.7),
+                                color: StitchPalTheme.textColor.withValues(alpha: 0.7),
                               ),
                         ),
                         const SizedBox(height: 2),
                         Text(
                           '${project.completedStepCount}/${project.totalSteps} steps completed',
                           style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                                color: StitchPalTheme.textColor.withOpacity(0.7),
+                                color: StitchPalTheme.textColor.withValues(alpha: 0.7),
                               ),
                         ),
                       ],
@@ -137,13 +137,13 @@ class ProjectCard extends StatelessWidget {
                     return Container(
                       padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                       decoration: BoxDecoration(
-                        color: StitchPalTheme.accentColor.withOpacity(0.2),
+                        color: StitchPalTheme.accentColor.withValues(alpha: 0.2),
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: Text(
                         '#$tag',
                         style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                              color: StitchPalTheme.textColor.withOpacity(0.7),
+                              color: StitchPalTheme.textColor.withValues(alpha: 0.7),
                               fontSize: 10,
                             ),
                       ),

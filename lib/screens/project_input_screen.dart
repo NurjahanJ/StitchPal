@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:stitchpal/screens/pattern_result_screen_updated.dart';
+import 'package:stitchpal/screens/pattern_result_screen.dart';
 import 'package:stitchpal/services/openai_service.dart';
 import 'package:stitchpal/theme.dart';
 import 'package:stitchpal/widgets/yarn_chip.dart';
@@ -79,7 +79,7 @@ class _ProjectInputScreenState extends State<ProjectInputScreen> {
       // Navigate to the pattern result screen
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => PatternResultScreenUpdated(pattern: pattern),
+          builder: (context) => PatternResultScreen(pattern: pattern),
         ),
       );
     } catch (e) {
@@ -119,7 +119,7 @@ class _ProjectInputScreenState extends State<ProjectInputScreen> {
                   color: StitchPalTheme.surfaceColor,
                   boxShadow: [
                     BoxShadow(
-                      color: StitchPalTheme.primaryColor.withOpacity(0.1),
+                      color: StitchPalTheme.primaryColor.withValues(alpha: 0.1),
                       blurRadius: 10,
                       offset: const Offset(0, 4),
                     ),
@@ -134,7 +134,7 @@ class _ProjectInputScreenState extends State<ProjectInputScreen> {
                         Container(
                           padding: const EdgeInsets.all(8),
                           decoration: BoxDecoration(
-                            color: StitchPalTheme.primaryColor.withOpacity(0.1),
+                            color: StitchPalTheme.primaryColor.withValues(alpha: 0.1),
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: const YarnIcon(
@@ -158,7 +158,7 @@ class _ProjectInputScreenState extends State<ProjectInputScreen> {
                     Text(
                       'Describe your project and we\'ll generate a custom crochet pattern just for you.',
                       style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                        color: StitchPalTheme.textColor.withOpacity(0.7),
+                        color: StitchPalTheme.textColor.withValues(alpha: 0.7),
                       ),
                     ),
                   ],
@@ -187,7 +187,7 @@ class _ProjectInputScreenState extends State<ProjectInputScreen> {
                         borderRadius: BorderRadius.circular(16),
                         boxShadow: [
                           BoxShadow(
-                            color: StitchPalTheme.primaryColor.withOpacity(0.08),
+                            color: StitchPalTheme.primaryColor.withValues(alpha: 0.08),
                             blurRadius: 8,
                             offset: const Offset(0, 2),
                           ),
@@ -207,7 +207,7 @@ class _ProjectInputScreenState extends State<ProjectInputScreen> {
                           fillColor: StitchPalTheme.surfaceColor,
                           contentPadding: const EdgeInsets.all(20),
                           hintStyle: TextStyle(
-                            color: StitchPalTheme.textColor.withOpacity(0.4),
+                            color: StitchPalTheme.textColor.withValues(alpha: 0.4),
                           ),
                         ),
                       ),
@@ -259,7 +259,7 @@ class _ProjectInputScreenState extends State<ProjectInputScreen> {
                         borderRadius: BorderRadius.circular(16),
                         boxShadow: [
                           BoxShadow(
-                            color: StitchPalTheme.primaryColor.withOpacity(0.2),
+                            color: StitchPalTheme.primaryColor.withValues(alpha: 0.2),
                             blurRadius: 12,
                             offset: const Offset(0, 4),
                           ),
@@ -300,7 +300,7 @@ class _ProjectInputScreenState extends State<ProjectInputScreen> {
                               height: 4,
                               width: 60,
                               decoration: BoxDecoration(
-                                color: StitchPalTheme.accentColor.withOpacity(0.5),
+                                color: StitchPalTheme.accentColor.withValues(alpha: 0.5),
                                 borderRadius: BorderRadius.circular(2),
                               ),
                             ),
@@ -310,7 +310,7 @@ class _ProjectInputScreenState extends State<ProjectInputScreen> {
                             'Your pattern will be generated using AI technology',
                             textAlign: TextAlign.center,
                             style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                              color: StitchPalTheme.textColor.withOpacity(0.5),
+                              color: StitchPalTheme.textColor.withValues(alpha: 0.5),
                               fontStyle: FontStyle.italic,
                             ),
                           ),

@@ -40,7 +40,7 @@ class _YarnPainter extends CustomPainter {
 
     // Draw yarn details with slightly darker color
     final detailPaint = Paint()
-      ..color = color.withOpacity(0.7)
+      ..color = color.withValues(alpha: 0.7)
       ..style = PaintingStyle.stroke
       ..strokeWidth = 1.5;
 

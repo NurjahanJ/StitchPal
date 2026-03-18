@@ -128,7 +128,7 @@ class _CrochetTimerState extends State<CrochetTimer> {
           Text(
             'Track the time you spend on your crochet projects',
             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-              color: StitchPalTheme.textColor.withOpacity(0.7),
+              color: StitchPalTheme.textColor.withValues(alpha: 0.7),
             ),
           ),
           
@@ -140,7 +140,7 @@ class _CrochetTimerState extends State<CrochetTimer> {
             subtitle: const Text('Get notified every 30 minutes to take a break'),
             value: _notificationsEnabled,
             onChanged: (value) => _toggleNotifications(),
-            activeColor: StitchPalTheme.primaryColor,
+            activeThumbColor: StitchPalTheme.primaryColor,
             contentPadding: const EdgeInsets.symmetric(horizontal: 0),
           ),
           
@@ -155,7 +155,7 @@ class _CrochetTimerState extends State<CrochetTimer> {
               borderRadius: BorderRadius.circular(16),
               boxShadow: [
                 BoxShadow(
-                  color: StitchPalTheme.primaryColor.withOpacity(0.1),
+                  color: StitchPalTheme.primaryColor.withValues(alpha: 0.1),
                   blurRadius: 10,
                   offset: const Offset(0, 4),
                 ),
@@ -242,10 +242,10 @@ class _CrochetTimerState extends State<CrochetTimer> {
           Container(
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
-              color: StitchPalTheme.accentColor.withOpacity(0.1),
+              color: StitchPalTheme.accentColor.withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(12),
               border: Border.all(
-                color: StitchPalTheme.accentColor.withOpacity(0.3),
+                color: StitchPalTheme.accentColor.withValues(alpha: 0.3),
               ),
             ),
             child: Column(
