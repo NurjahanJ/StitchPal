@@ -1,12 +1,5 @@
 [build]
-  command = """
-    # Install Flutter
-    git clone https://github.com/flutter/flutter.git --depth 1 -b stable $HOME/flutter
-    export PATH="$PATH:$HOME/flutter/bin"
-    flutter doctor -v
-    flutter pub get
-    flutter build web --release
-  """
+  command = "bash build-netlify.sh"
   publish = "build/web"
 
 [[redirects]]
