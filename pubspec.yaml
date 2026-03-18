@@ -78,9 +78,9 @@ flutter:
   uses-material-design: true
 
   # Assets for the StitchPal app
-  assets:
-    - assets/images/
-    - .env
+  # Note: .env is not bundled as it contains secrets - use environment variables instead
+  # assets:
+    # - assets/images/  # Uncomment when images are added to this directory
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
