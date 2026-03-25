@@ -100,7 +100,3 @@ The app is currently under active development (Last Updated: May 16, 2025) with 
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
