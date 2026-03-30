@@ -1,4 +1,4 @@
-# StitchPal
+# StitchPal: Made for and made by a crochet lover! 
 
 StitchPal is a Flutter application that helps crochet enthusiasts create, manage, and track their crochet projects. The app leverages OpenAI's API to generate custom crochet patterns and yarn suggestions based on user input, along with AI-generated images of the patterns.
 
